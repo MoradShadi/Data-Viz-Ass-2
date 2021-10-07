@@ -1,0 +1,27 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "width": 800,
+ "height": 500,
+ "title": "USA Fast Food Restaurants",
+ "projection": {"type": "albersUsa"},
+ "layer": [
+ {
+ "data": {
+ "url":
+"data/us-10m.json",
+ "format": {"type": "topojson", "feature": "states"}
+ },
+ "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+ },
+ {
+ "data": {
+ "url": "https://gist.githubusercontent.com/MoradShadi/91df0569f0f99eb62d273cd055f743b8/raw/55810dfd5cbe7e6eb149895b74765e0a0850f39c/USAfastfood.csv", "format" : {"type": "csv" }
+ },
+ "mark": {"type": "circle", "tooltip": {"content": "data"}},"encoding": {
+ "longitude": {"field": "longitude", "type": "quantitative"},
+ "latitude": {"field": "latitude", "type": "quantitative"},
+ "color": {"field": "province", "title": "Province"}
+ }
+ }
+ ]
+}
