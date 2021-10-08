@@ -8,7 +8,7 @@
  {
  "data": {
  "url":
-"data/us-10m.json",
+"https://vega.github.io/vega-datasets/data/us-10m.json",
  "format": {"type": "topojson", "feature": "states"}
  },
  "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
