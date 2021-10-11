@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <style>
+  body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  </style>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
@@ -14,40 +23,60 @@
 </head>
 <body>
 
-<div id="vis"></div>
+  <div class="topnav">
+    <a href="#Intro">Introduction</a>
+    <a href="#map">USA Map</a>
+    <a href="#bar">Bar Chart</a>
+    <a href="#heat">Heat Map</a>
+  </div>
 
-<script type="text/javascript">
-  var spec2 = {
- "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "width": 800,
- "height": 500,
- "title": "USA Fast Food Restaurants",
- "projection": {"type": "albersUsa"},
- "layer": [
- {
- "data": {
- "url":
-"https://vega.github.io/vega-datasets/data/us-10m.json",
- "format": {"type": "topojson", "feature": "states"}
- },
- "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
- },
- {
- "data": {
- "url": "https://gist.githubusercontent.com/MoradShadi/91df0569f0f99eb62d273cd055f743b8/raw/55810dfd5cbe7e6eb149895b74765e0a0850f39c/USAfastfood.csv", "format" : {"type": "csv" }
- },
- "mark": {"type": "circle", "tooltip": {"content": "data"}},"encoding": {
- "longitude": {"field": "longitude", "type": "quantitative"},
- "latitude": {"field": "latitude", "type": "quantitative"},
- "color": {"field": "province", "title": "Province"}
- }
- }
- ]
-}
-;
-  vegaEmbed('#vis', spec2);
+  <div id = "title">
+    <h1 class = "title"> Fast Food Restaurants In the USA</h1>
+  </div>
 
-</script>
+  <div id = "Intro">
+    <h2 class="intro">This webpage explores fast food restaurants across the United States. Throughout this webpage you will find,
+    a map displaying the geographic locations of fast food chains across different states; alongside some charts
+  looking into a more statistical perspective related to these fast food chains. This is useful for anyone interested
+in a visual representation of the distribution of major fast food restaurants in the US alongside the accompanying stats. </h2>
+  </div>
 
+  <div class = "container">
+    <div id="map">
+      <script type="text/javascript">
+        var spec2 = "https://raw.githubusercontent.com/MoradShadi/Data-Viz-Ass-2/main/js/map.vg.json";
+        vegaEmbed('#map', spec2);
+      </script>
+    </div>
+      <h2 class="text-right">The map on the left is a geographic layout of fast food restaurants across the United States. It is
+      color coded by state for better clarity and differentiation especially in areas near state lines. It is
+    quite visible that the eastern half of the US is more packed with fast food restaurants than the west. </h2>
+
+  </div>
+
+
+<div class = "container1">
+
+  <h2 class = "text-left">The chart on the right... </h2>
+
+  <div id="bar">
+    <script type="text/javascript">
+      var spec2 = "https://raw.githubusercontent.com/MoradShadi/Data-Viz-Ass-2/main/js/map.vg.json";
+      vegaEmbed('#bar', spec2);
+    </script>
+  </div>
+
+</div>
+
+<div class = "container">
+  <div id="heat">
+    <script type="text/javascript">
+      var spec2 = "https://raw.githubusercontent.com/MoradShadi/Data-Viz-Ass-2/main/js/map.vg.json";
+      vegaEmbed('#heat', spec2);
+    </script>
+  </div>
+
+  <h2 class = "text-right">The chart on the left... </h2>
+</div>
 </body>
 </html>
