@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "width": 800,
+ "height": 500,
+ "title": "Popular restaurants across provinces",
+ "data": {
+ "url": "https://gist.githubusercontent.com/MoradShadi/91df0569f0f99eb62d273cd055f743b8/raw/55810dfd5cbe7e6eb149895b74765e0a0850f39c/USAfastfood.csv", "format" : {"type": "csv" }
+ },
+ "mark": "rect",
+  "encoding": {
+    "y": {"field": "name", "scale": {
+        "domain": ["","Burger King", "Arby's", "Taco Bell", "Wendy's","McDonald's",  "Pizza Hut", "Dairy Queen", "Subway"]
+      }},
+    "x": {"field": "province", "type": "nominal"},
+    "color": {"aggregate": "count", "field": "name", "title": "Frequency"}
+  },
+  "config": {
+    "axis": {"grid": true, "tickBand": "extent"}
+  }
+}
