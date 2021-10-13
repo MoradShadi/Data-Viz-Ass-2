@@ -51,6 +51,14 @@
 	float: right;
 }
 
+.text {
+	top: 100px;
+  font-size: 17px;
+	background-color: #D5DBDB;
+	color: black;
+	text-decoration: none;
+}
+
 .text-right {
   font-size: 17px;
 	float: right;
