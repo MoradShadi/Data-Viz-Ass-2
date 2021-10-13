@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "width": 450,
- "height": 500,
+ "width": 480,
+ "height": 480,
  "title": "Count of Fast Food restaurants per province",
  "data": {
  "url": "https://gist.githubusercontent.com/MoradShadi/91df0569f0f99eb62d273cd055f743b8/raw/55810dfd5cbe7e6eb149895b74765e0a0850f39c/USAfastfood.csv", "format" : {"type": "csv" }

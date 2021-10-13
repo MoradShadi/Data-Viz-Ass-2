@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-   "width": 350,
+   "width": 320,
  "height": 500,
  "title": "Restaurant distribution in Hawaii",
   "data": { "url":  "https://gist.githubusercontent.com/MoradShadi/91df0569f0f99eb62d273cd055f743b8/raw/55810dfd5cbe7e6eb149895b74765e0a0850f39c/USAfastfood.csv", "format" : {"type": "csv" }},

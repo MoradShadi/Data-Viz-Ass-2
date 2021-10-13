@@ -5,12 +5,12 @@
 
 #bar {
 	top:100px;
-	float: right;
+	float: left;
 }
 
 #hawaii {
 	top: 100px;
-	float: left;
+	float: right;
 }
 
 #heat {
