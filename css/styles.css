@@ -8,9 +8,13 @@
 	float: right;
 }
 
+#hawaii {
+	float: left;
+}
+
 #heat {
 	top: 200px;
-	float: left;
+	float: right;
 }
 
 .topnav {
