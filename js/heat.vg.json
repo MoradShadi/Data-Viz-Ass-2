@@ -12,7 +12,8 @@
         "domain": ["","Burger King", "Arby's", "Taco Bell", "Wendy's","McDonald's",  "Pizza Hut", "Dairy Queen", "Subway"]
       }},
     "x": {"field": "province", "type": "nominal"},
-    "color": {"aggregate": "count", "field": "name", "title": "Frequency"}
+    "color": {"aggregate": "count", "field": "name", "title": "Frequency"},
+    "tooltip": [{"field": "province"}, {"aggregate": "count", "field": "name"}]
   },
   "config": {
     "axis": {"grid": true, "tickBand": "extent"}

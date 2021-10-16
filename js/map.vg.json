@@ -20,7 +20,8 @@
  "mark": {"type": "circle", "tooltip": {"content": "data"}},"encoding": {
  "longitude": {"field": "longitude", "type": "quantitative"},
  "latitude": {"field": "latitude", "type": "quantitative"},
- "color": {"field": "province", "legend": null ,"title": "Province"}
+ "color": {"field": "province", "legend": null ,"title": "Province"},
+ "tooltip": [{"field": "name", "title": "Restaurant name"},{"field": "province"}, {"field": "city"},{"field": "address"}]
  }
  }
  ]
